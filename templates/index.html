@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.ico' ) }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css' ) }}">
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/index.js') }}"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +16,6 @@
     <div class="form-wrapper">
         <h1>RetiSpect</h1>
         <form method="POST" action="/analyze" enctype="multipart/form-data">
-
-
             <label class="custom-file-upload" for="file">
                 <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24">

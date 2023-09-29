@@ -71,8 +71,8 @@
 }
 
 .checkbox-wrapper .checkbox-svg {
-    width: 20.42069px;
-    height: 20.42069px;
+    width: 21.42069px;
+    height: 21.42069px;
 }
 
 .checkbox-box {
@@ -81,7 +81,7 @@
 
 .checkbox-wrapper .checkbox-box {
     fill: rgb(255, 255, 255);
-    stroke: #50ad4e;
+    stroke: #51ac4f;
     stroke-dasharray: 800;
     stroke-dashoffset: 800;
     transition: stroke-dashoffset 0.42069s ease-in;

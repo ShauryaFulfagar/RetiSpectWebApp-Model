@@ -10,7 +10,7 @@ import random
 
 app = Flask(__name__)
 
-model = load_model('PATH TO H5 MODEL GOES HERE')
+model = load_model('Path to model goes here')
 
 @app.route('/')
 def index():
