@@ -10,11 +10,13 @@ import random
 
 app = Flask(__name__)
 
-model = load_model('Path to model goes here')
+model = load_model('Path to h5 model goes here')
+
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
@@ -37,28 +39,32 @@ def analyze():
     image = preprocess_input(image)
     prediction = model.predict(image)
     predicted_class_index = np.argmax(prediction)
-    
+
     class_names = ["Cataract", "Diabetic Retinopathy", "Glaucoma", "Normal"]
     predicted_class = class_names[predicted_class_index]
-    
+
     name = request.form.get('name')
     age = request.form.get('age')
     sex = request.form.get('sex')
-    
-    result = {"Name": name, "Age": age, "Sex": sex, "Predicted Category": predicted_class}
+
+    result = {"Name": name, "Age": age, "Sex": sex,
+              "Predicted Category": predicted_class}
     results_df = pd.DataFrame(result, index=[0])
-    time.sleep(random.uniform(3.42069, 5.69420))
+    time.sleep(random.uniform(3.42069, 4.69420))
     return redirect(url_for('show_loader'))
+
 
 @app.route('/show_loader')
 def show_loader():
     # Render the loader.html page
     return render_template('loader.html')
 
+
 @app.route('/show_results')
 def show_results():
     # Render the results.html page
     return render_template('result.html', results=results_df.to_html(index=False))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
