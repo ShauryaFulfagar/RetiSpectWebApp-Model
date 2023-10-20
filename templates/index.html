@@ -14,7 +14,7 @@
 
 <body>
     <div class="form-wrapper">
-        <h1>RetiSpect</h1>
+        <h1 style="margin-top: 82px;">RetiSpect</h1>
         <form method="POST" action="/analyze" enctype="multipart/form-data">
             <label class="custom-file-upload" for="file">
                 <div class="icon">
@@ -40,8 +40,6 @@
 
             <label for="age">Patient's Age</label><br>
             <input class="input" type="text" name="age" id="age" required placeholder="Patient's age"><br><br>
-
-
             <div class="checkbox-wrapper">
                 <input id="terms-checkbox-37" name="checkbox" type="checkbox">
                 <label class="terms-label" for="terms-checkbox-37">
@@ -56,9 +54,8 @@
                     <span class="label-text">Would you like a personalised PDF report to be generated?</span>
                 </label>
             </div><br>
+            <span class="info">Please wait for a few seconds after clicking analyse</span><br><br>
             <input type="submit" value="Analyze" class="button">
-
         </form>
     </div>
-
 </html>

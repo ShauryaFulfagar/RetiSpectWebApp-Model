@@ -13,7 +13,7 @@
 
 .custom-file-upload {
     height: 100px;
-    margin-left: 142px;
+    margin-left: 150px;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -126,10 +126,15 @@ body {
     color: #999;
 }
 
+.info{
+    color: rgb(244, 70, 70);
+}
+
 .button {
     color: #090909;
     padding: 0.7em 1.7em;
     font-size: 16px;
+    margin: 18px;
     border-radius: 0.5em;
     background: #e8e8e8;
     border: 1px solid #e8e8e8;
