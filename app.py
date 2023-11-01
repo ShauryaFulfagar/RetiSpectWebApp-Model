@@ -1,22 +1,18 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array
 from keras.applications.vgg16 import preprocess_input
 import numpy as np
 import cv2
 import pandas as pd
-import time
-import random
 
 app = Flask(__name__)
 
-model = load_model('Path to h5 model goes here')
-
+model = load_model('82.82.h5')
 
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
@@ -50,21 +46,19 @@ def analyze():
     result = {"Name": name, "Age": age, "Sex": sex,
               "Predicted Category": predicted_class}
     results_df = pd.DataFrame(result, index=[0])
-    time.sleep(random.uniform(3.42069, 4.69420))
-    return redirect(url_for('show_loader'))
-
+    
+    # Return a JSON response
+    return jsonify({})
 
 @app.route('/show_loader')
 def show_loader():
     # Render the loader.html page
     return render_template('loader.html')
 
-
 @app.route('/show_results')
 def show_results():
     # Render the results.html page
     return render_template('result.html', results=results_df.to_html(index=False))
-
 
 if __name__ == '__main__':
     app.run(debug=True)
