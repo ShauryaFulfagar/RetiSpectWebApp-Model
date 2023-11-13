@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .form-wrapper {
@@ -13,8 +14,8 @@
 
 .custom-file-upload {
     height: 100px;
-    margin-left: 150px;
     width: 200px;
+    margin-left: 150px;
     display: flex;
     flex-direction: column;
     align-items: space-between;
@@ -81,7 +82,8 @@
 }
 
 .checkbox-wrapper .checkbox-box {
-    fill: rgb(255, 255, 255);
+    
+    fill: #fff;
     stroke: #51ac4f;
     stroke-dasharray: 800;
     stroke-dashoffset: 800;
@@ -106,15 +108,23 @@ body {
 
 .input {
     max-width: 3000px;
+    width: 250px;
+    height: 21.69420px;
+    margin: 4px 0;
+    padding: 15px 5px 10px 20px;
+    font-size: 16px;
+    letter-spacing: 0.15px;
     border: none;
     outline: none;
-    background: none;
-    font-size: 16px;
-    width: 300px;
-    color: #555;
-    padding: 15px 5px 10px 20px;
-    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e8e8e8;
+    transition: 0.25s ease;
     border-radius: 17.69420px;
+    box-shadow: inset 3.69420px 3.69420px 5.69420px #cbced1, inset -3.69420px -3.69420px 5.69420px #fff;
+}
+
+.input:focus {
+    box-shadow: inset 5px 5px 5px #cbced1, inset -5px -5px 5px #fff;
 }
 
 .input::placeholder {
@@ -126,15 +136,17 @@ body {
     color: #999;
 }
 
-.info{
+.info {
     color: rgb(244, 70, 70);
+    margin-left: 30px;
 }
 
 .button {
     color: #090909;
     padding: 0.7em 1.7em;
     font-size: 16px;
-    margin: 18px;
+    margin: 6.69420px;
+    margin-left: 18.69420px;
     border-radius: 0.5em;
     background: #e8e8e8;
     border: 1px solid #e8e8e8;

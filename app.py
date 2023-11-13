@@ -8,7 +8,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-model = load_model('82.82.h5')
+model = load_model('Path to h5 model goes here')
 
 @app.route('/')
 def index():
@@ -57,8 +57,8 @@ def show_loader():
 
 @app.route('/show_results')
 def show_results():
-    # Render the results.html page
-    return render_template('result.html', results=results_df.to_html(index=False))
+    results_list = results_df.to_dict(orient='records')
+    return render_template('result.html', results=results_list)
 
 if __name__ == '__main__':
     app.run(debug=True)
