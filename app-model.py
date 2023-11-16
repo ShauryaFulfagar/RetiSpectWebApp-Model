@@ -17,8 +17,8 @@ PATH = "./dataset"
 data_dir_list = os.listdir(PATH)
 img_rows, img_cols = 224, 224
 num_channel = 3
-num_epoch = 60
-batch_size = 36
+num_epoch = 100
+batch_size = 32
 
 img_data_list = []
 classes_names_list = []
